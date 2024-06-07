@@ -234,7 +234,7 @@ pub fn sha256_stack(stack: &mut StackTracker, num_bytes: u32) -> Script {
     //println!("{:?}", bytes_per_chunk);
     //println!("{:?}", padding_scripts);
 
-    let mut use_add_table = chunks == 1;
+    let mut use_add_table = false; // chunks == 1
 
     let mut message = (0..num_bytes * 2)
         .map(|i| stack.define(1, &format!("message[{}]", i)))
