@@ -281,7 +281,7 @@ pub fn sha256(num_bytes: u32) -> Script {
     let rrot_size = 96;
     let half_logic_size = 136 + 16;
     let mut tables_size = rrot_size + half_logic_size;
-    let use_add_table = chunks == 1;
+    let use_add_table = false; // chunks == 1
     if use_add_table {
         tables_size += add_size;
     }
